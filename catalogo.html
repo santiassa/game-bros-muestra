@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6D28D9">
+  <title>Catálogo | GameBros</title>
+  <meta name="description" content="Catálogo unificado GameBros: PlayStation, Xbox, Nintendo Switch y accesorios. Filtra por precio en COP, tipo de producto y estado.">
+  <meta property="og:title" content="Catálogo | GameBros">
+  <meta property="og:description" content="Catálogo unificado GameBros: PlayStation, Xbox, Nintendo Switch y accesorios. Filtra por precio en COP, tipo de producto y estado.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo-gamebros.png">
+  <link rel="icon" type="image/png" href="logo-gamebros-192.png">
+  <link rel="apple-touch-icon" href="logo-gamebros-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page-catalogo">
+
+<svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="icon-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></symbol>
+  <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="icon-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
+  <symbol id="icon-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.7a1 1 0 0 0 1-.8L21 8H6"/></symbol>
+  <symbol id="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+  <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4h.1c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.4ZM12 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.9-9.8 2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.9-9.8 9.9Zm5.4-7.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/></symbol>
+  <symbol id="icon-tiktok" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.4 2.3 1.8 3.7 4 4v3.1c-1.5 0-2.9-.5-4-1.3v6.4c0 3.6-2.5 6-6 6-3.3 0-5.9-2.5-5.9-5.8 0-3.2 2.5-5.7 5.8-5.7.3 0 .6 0 .9.1v3.2c-.3-.1-.6-.2-.9-.2-1.5 0-2.6 1.1-2.6 2.6 0 1.6 1.1 2.6 2.7 2.6 1.7 0 2.7-1.1 2.7-3V3h3.3Z"/></symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8Z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="icon-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+  <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3 6.5 7 .9-5 4.8 1.2 7L12 17.8 5.8 21.2 7 14.2 2 9.4l7-.9L12 2Z"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 6"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></symbol>
+  <symbol id="icon-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 15H6L5 6M10 11v6M14 11v6"/></symbol>
+  <symbol id="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="icon-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m21 8-9-5-9 5 9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></symbol>
+  <symbol id="icon-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="2" y="13" width="4" height="7" rx="2"/><rect x="18" y="13" width="4" height="7" rx="2"/><path d="M20 20a4 4 0 0 1-4 3h-2"/></symbol>
+  <symbol id="icon-return" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="icon-gamepad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12a4 4 0 0 1 3.9 4.9l-1.2 4.6A2 2 0 0 1 18.8 19l-2.5-2.5H7.7L5.2 19a2 2 0 0 1-1.9-1.5l-1.2-4.6A4 4 0 0 1 6 8Z"/><path d="M8 11v3M6.5 12.5h3M16 11.5h.01M18 13.5h.01"/></symbol>
+  <symbol id="icon-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M7.5 8a2.5 2.5 0 1 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 1 1 0 5"/></symbol>
+  <symbol id="icon-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8Z"/></symbol>
+  <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.5 9 9 0 0 1-4-1L3 21l2-5.5a8.5 8.5 0 1 1 16-4Z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="topbar__group">
+        <p class="topbar__promo"><svg class="icon" aria-hidden="true"><use href="#icon-truck"></use></svg> Envío gratis desde <strong>$300.000</strong></p>
+        <span class="topbar__center">Bogotá · Colombia</span>
+      </div>
+      <div class="topbar__group">
+        <a href="tel:+573105550134"><svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg> +57 310 555 0134</a>
+        <a href="faq.html"><svg class="icon" aria-hidden="true"><use href="#icon-chat"></use></svg> Ayuda</a>
+        <span class="topbar__currency">COP $</span>
+        <div class="topbar__socials">
+          <a href="https://www.tiktok.com/@gamebrosoficial12s" target="_blank" rel="noopener" aria-label="GameBros en TikTok" title="TikTok"><svg class="icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg></a>
+          <a href="https://www.instagram.com/gamebrosoficial12s/" target="_blank" rel="noopener" aria-label="GameBros en Instagram" title="Instagram"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap header-main">
+    <a class="brand" href="index.html" aria-label="GameBros — Ir al inicio">
+      <img src="logo-gamebros-192.png" alt="GameBros" width="192" height="192">
+    </a>
+
+    <div class="header-search">
+      <form class="header-search__form" role="search" action="catalogo.html" method="get">
+        <span class="header-search__icon"><svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg></span>
+        <input class="header-search__input" id="headerSearchInput" type="search" name="q" placeholder="Busca consolas, juegos, controles, diademas..." autocomplete="off" aria-label="Buscar productos">
+        <select class="header-search__select" name="categoria" aria-label="Filtrar búsqueda por categoría">
+          <option value="">Todas</option>
+          <option value="playstation">PlayStation</option>
+          <option value="xbox">Xbox</option>
+          <option value="switch">Switch</option>
+          <option value="accesorios">Accesorios</option>
+        </select>
+        <button class="header-search__btn" type="submit">
+          <svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg><span>Buscar</span>
+        </button>
+      </form>
+      <div class="header-search__hint" id="searchHint" aria-live="polite"></div>
+    </div>
+
+    <div class="header-actions">
+      <div class="header-socials">
+        <a href="https://www.tiktok.com/@gamebrosoficial12s" target="_blank" rel="noopener" aria-label="GameBros en TikTok" title="TikTok"><svg class="icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg></a>
+        <a href="https://www.instagram.com/gamebrosoficial12s/" target="_blank" rel="noopener" aria-label="GameBros en Instagram" title="Instagram"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+      </div>
+      <button class="cart-btn" type="button" data-action="cart-open" aria-label="Abrir carrito de compras">
+        <span class="cart-btn__icon">
+          <svg class="icon" aria-hidden="true"><use href="#icon-cart"></use></svg>
+          <span class="cart-btn__count" data-cart-count>0</span>
+        </span>
+        <span class="cart-btn__copy"><small>Mi carrito</small><strong>Comprar</strong></span>
+      </button>
+      <button class="menu-toggle" type="button" data-action="menu-open" aria-label="Abrir menú de navegación">
+        <svg class="icon" aria-hidden="true"><use href="#icon-menu"></use></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="main-nav" aria-label="Navegación principal">
+    <div class="wrap main-nav__inner">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__link" href="index.html">Inicio</a></li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalogo.html" aria-current="page">Catálogo <svg class="icon" aria-hidden="true"><use href="#icon-chevron-down"></use></svg></a>
+          <div class="nav-dropdown">
+            <a href="catalogo.html">Todos los productos <span>30</span></a>
+            <a href="catalogo.html?categoria=playstation">PlayStation <span>8</span></a>
+            <a href="catalogo.html?categoria=xbox">Xbox <span>7</span></a>
+            <a href="catalogo.html?categoria=switch">Switch <span>7</span></a>
+            <a href="catalogo.html?categoria=accesorios">Accesorios <span>8</span></a>
+            <div class="nav-dropdown__all"><a href="catalogo.html?categoria=combos">Ver combos <span>3</span></a></div>
+          </div>
+        </li>
+        <li class="main-nav__item"><a class="main-nav__link" href="quienes-somos.html">Quiénes somos</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="faq.html">FAQ</a></li>
+      </ul>
+      <a class="main-nav__promo" href="catalogo.html?estado=promo">
+        <svg class="icon" aria-hidden="true"><use href="#icon-zap"></use></svg> Ofertas hasta -30%
+      </a>
+    </div>
+  </nav>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true" aria-label="Menú de navegación móvil">
+  <div class="mobile-drawer__head">
+    <a href="index.html" aria-label="GameBros — Inicio"><img src="logo-gamebros-192.png" alt="GameBros" width="192" height="192"></a>
+    <button class="drawer-close" type="button" data-action="menu-close" aria-label="Cerrar menú">
+      <svg class="icon" aria-hidden="true"><use href="#icon-close"></use></svg>
+    </button>
+  </div>
+  <div class="mobile-drawer__body">
+    <nav class="mobile-drawer__nav" aria-label="Menú móvil">
+      <a href="index.html">Inicio <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+      <a href="catalogo.html">Catálogo <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+      <a href="quienes-somos.html">Quiénes somos <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+      <a href="faq.html">Preguntas frecuentes <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg></a>
+    </nav>
+    <p class="mobile-drawer__label">Categorías del catálogo</p>
+    <div class="mobile-drawer__cats">
+      <a href="catalogo.html?categoria=playstation">PlayStation <span>8</span></a>
+      <a href="catalogo.html?categoria=xbox">Xbox <span>7</span></a>
+      <a href="catalogo.html?categoria=switch">Switch <span>7</span></a>
+      <a href="catalogo.html?categoria=accesorios">Accesorios <span>8</span></a>
+      <a href="catalogo.html?categoria=combos">Combos <span>3</span></a>
+    </div>
+    <div class="mobile-drawer__foot">
+      <a class="btn btn-primary btn-block" href="catalogo.html?estado=promo">Ver ofertas</a>
+      <div class="mobile-drawer__socials">
+        <a href="https://www.tiktok.com/@gamebrosoficial12s" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg> TikTok</a>
+        <a href="https://www.instagram.com/gamebrosoficial12s/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg> Instagram</a>
+      </div>
+    </div>
+  </div>
+</aside>
+<main id="main">
+<!-- ============================= PAGE HERO ============================== -->
+<section class="page-hero">
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="Migas de pan">
+      <a href="index.html">Inicio</a>
+      <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
+      <a href="catalogo.html">Catálogo</a>
+      <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
+      <strong id="crumbActive">Todos</strong>
+    </nav>
+    <h1 class="page-hero__title">Catálogo <span id="catalogTitleSpan">&gt; Todos</span></h1>
+    <p class="page-hero__sub">Consolas, juegos, controles y accesorios originales en un solo lugar. Filtra por categoría, precio en COP, tipo de producto y estado sin salir del catálogo.</p>
+    <div class="page-hero__meta">
+      <span><svg class="icon" aria-hidden="true"><use href="#icon-truck"></use></svg> Envío gratis desde $300.000</span>
+      <span><svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg> Garantía oficial GameBros</span>
+      <span><svg class="icon" aria-hidden="true"><use href="#icon-card"></use></svg> PSE · Nequi · Tarjetas</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== CATEGORY BAR ============================== -->
+<div class="catalog-catbar" aria-label="Subsecciones del catálogo">
+  <div class="wrap catalog-catbar__inner">
+    <a class="cat-link is-active" href="catalogo.html" data-category="todos">Todos <span data-cat-count="todos">30</span></a>
+    <a class="cat-link" href="catalogo.html?categoria=playstation" data-category="playstation">PlayStation <span data-cat-count="playstation">8</span></a>
+    <a class="cat-link" href="catalogo.html?categoria=xbox" data-category="xbox">Xbox <span data-cat-count="xbox">7</span></a>
+    <a class="cat-link" href="catalogo.html?categoria=switch" data-category="switch">Switch <span data-cat-count="switch">7</span></a>
+    <a class="cat-link" href="catalogo.html?categoria=accesorios" data-category="accesorios">Accesorios <span data-cat-count="accesorios">8</span></a>
+    <a class="cat-link" href="catalogo.html?categoria=combos" data-category="combos">Combos <span data-cat-count="combos">3</span></a>
+  </div>
+</div>
+
+<!-- ============================ CATALOG ================================ -->
+<section class="catalog-section">
+  <div class="wrap">
+    <div class="catalog-subnav" id="catalogSubnav">
+      <strong>Catálogo &gt;</strong>
+      <strong>Todos</strong> <span>|</span>
+      <a href="catalogo.html?categoria=playstation" data-category="playstation">PlayStation</a> <span>|</span>
+      <a href="catalogo.html?categoria=xbox" data-category="xbox">Xbox</a> <span>|</span>
+      <a href="catalogo.html?categoria=switch" data-category="switch">Switch</a> <span>|</span>
+      <a href="catalogo.html?categoria=accesorios" data-category="accesorios">Accesorios</a> <span>|</span>
+      <a href="catalogo.html?categoria=combos" data-category="combos">Combos</a>
+    </div>
+
+    <div class="catalog-layout">
+      <!-- Sidebar -->
+      <aside class="catalog-sidebar" aria-label="Filtros del catálogo">
+        <div class="filter-panel">
+          <div class="filter-panel__head">
+            <strong>Filtrar</strong>
+            <button class="filter-clear" type="button" id="clearFilters">Limpiar todo</button>
+          </div>
+
+          <div class="filter-group">
+            <button class="filter-group__title" type="button" data-collapse aria-expanded="true">
+              Precio (COP)
+              <svg class="icon" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+            </button>
+            <div class="filter-group__body">
+              <div class="filter-price">
+                <div class="filter-price__field">
+                  <span>$</span>
+                  <input id="priceMin" type="number" min="0" max="4500000" step="50000" value="0" inputmode="numeric" aria-label="Precio mínimo en COP">
+                </div>
+                <span class="filter-price__sep">—</span>
+                <div class="filter-price__field">
+                  <span>$</span>
+                  <input id="priceMax" type="number" min="0" max="4500000" step="50000" value="4500000" inputmode="numeric" aria-label="Precio máximo en COP">
+                </div>
+              </div>
+              <input class="filter-range" id="priceRange" type="range" min="0" max="4500000" step="50000" value="4500000" aria-label="Ajustar precio máximo">
+              <p class="filter-note">Rango disponible: $0 – $4.500.000 COP</p>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <button class="filter-group__title" type="button" data-collapse aria-expanded="true">
+              Tipo de producto
+              <svg class="icon" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+            </button>
+            <div class="filter-group__body">
+              <div class="check-list">
+                <label class="check"><input type="checkbox" data-type value="Consola"><span>Consola <em data-type-count="Consola">10</em></span></label>
+                <label class="check"><input type="checkbox" data-type value="Control"><span>Control <em data-type-count="Control">6</em></span></label>
+                <label class="check"><input type="checkbox" data-type value="Diadema"><span>Diadema <em data-type-count="Diadema">4</em></span></label>
+                <label class="check"><input type="checkbox" data-type value="Videojuego"><span>Videojuego <em data-type-count="Videojuego">1</em></span></label>
+                <label class="check"><input type="checkbox" data-type value="Combo"><span>Combo <em data-type-count="Combo">3</em></span></label>
+                <label class="check"><input type="checkbox" data-type value="Accesorio"><span>Accesorio <em data-type-count="Accesorio">6</em></span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <button class="filter-group__title" type="button" data-collapse aria-expanded="true">
+              Estado
+              <svg class="icon" aria-hidden="true"><use href="#icon-chevron-down"></use></svg>
+            </button>
+            <div class="filter-group__body">
+              <div class="check-list">
+                <label class="check"><input type="checkbox" data-state value="stock"><span>En Stock <em data-state-count="stock">30</em></span></label>
+                <label class="check"><input type="checkbox" data-state value="promo"><span>En Promoción <em data-state-count="promo">19</em></span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-trust">
+            <p><svg class="icon" aria-hidden="true"><use href="#icon-shield"></use></svg> Todos los productos cuentan con garantía oficial GameBros.</p>
+            <p><svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg> ¿Dudas? Escríbenos al +57 310 555 0134.</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main -->
+      <div class="catalog-main">
+        <div class="catalog-toolbar">
+          <p class="catalog-count" id="catalogCount" aria-live="polite">Mostrando <strong>30</strong> de <strong>30</strong> productos</p>
+          <div class="catalog-tools">
+            <label for="catalogSort">Ordenar por</label>
+            <select class="catalog-sort" id="catalogSort">
+              <option value="relevance">Relevancia</option>
+              <option value="price-asc">Precio: menor a mayor</option>
+              <option value="price-desc">Precio: mayor a menor</option>
+              <option value="discount-desc">Mayor descuento</option>
+              <option value="name-asc">Nombre A–Z</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="active-filters" id="activeFilters" hidden></div>
+
+        <div class="catalog-grid" id="catalogGrid"></div>
+
+        <div class="catalog-empty" id="catalogEmpty" hidden>
+          <div class="catalog-empty__icon"><svg class="icon" aria-hidden="true"><use href="#icon-search"></use></svg></div>
+          <h3>No encontramos productos</h3>
+          <p>Prueba con otro rango de precio, categoría o limpia los filtros.</p>
+          <button class="btn btn-primary" type="button" id="emptyClear">Limpiar filtros</button>
+        </div>
+
+        <noscript>
+          <p style="margin-top:18px;color:#6F6880;font-size:13px;">Activa JavaScript para usar los filtros instantáneos. También puedes escribirnos por <a href="https://wa.me/573105550134" target="_blank" rel="noopener" style="color:#6D28D9;">WhatsApp</a> y te ayudamos a encontrar tu producto.</p>
+        </noscript>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top wrap">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <a class="footer-brand" href="index.html" aria-label="GameBros — Inicio">
+          <img src="logo-gamebros-192.png" alt="GameBros" width="192" height="192">
+        </a>
+        <p>Tu tienda gamer en Bogotá. Consolas, juegos, controles y accesorios originales con garantía oficial y asesoría personalizada.</p>
+        <div class="footer-socials">
+          <a href="https://www.tiktok.com/@gamebrosoficial12s" target="_blank" rel="noopener" aria-label="GameBros en TikTok"><svg class="icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg> TikTok</a>
+          <a href="https://www.instagram.com/gamebrosoficial12s/" target="_blank" rel="noopener" aria-label="GameBros en Instagram"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg> Instagram</a>
+        </div>
+        <div class="footer-payments" aria-label="Medios de pago">
+          <span>PSE</span><span>Nequi</span><span>Visa</span><span>Mastercard</span><span>Contraentrega</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-title">Tienda</h3>
+        <ul class="footer-links">
+          <li><a href="catalogo.html">Todos los productos</a></li>
+          <li><a href="catalogo.html?categoria=playstation">PlayStation</a></li>
+          <li><a href="catalogo.html?categoria=xbox">Xbox</a></li>
+          <li><a href="catalogo.html?categoria=switch">Switch</a></li>
+          <li><a href="catalogo.html?categoria=accesorios">Accesorios</a></li>
+          <li><a href="catalogo.html?categoria=combos">Combos</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer-title">Ayuda</h3>
+        <ul class="footer-links">
+          <li><a href="quienes-somos.html">Quiénes somos</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="faq.html#faq-envios">Envíos y entregas</a></li>
+          <li><a href="faq.html#faq-garantias">Garantías y devoluciones</a></li>
+          <li><a href="quienes-somos.html#sede">Nuestra sede</a></li>
+        </ul>
+      </div>
+      <div class="footer-col footer-col--contact">
+        <h3 class="footer-title">Contacto</h3>
+        <ul class="footer-contact">
+          <li><svg class="icon" aria-hidden="true"><use href="#icon-whatsapp"></use></svg><a href="https://wa.me/573105550134" target="_blank" rel="noopener">WhatsApp +57 310 555 0134</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg><a href="mailto:hola@gamebros.co">hola@gamebros.co</a></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg><span>Cra. 91 #147-32, Suba, Bogotá</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg><span>Lun a Sáb · 9:00 a.m. – 7:00 p.m.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom wrap">
+    <p>© <span data-year>2026</span> GameBros. Todos los derechos reservados. Hecho en Bogotá, Colombia.</p>
+    <div class="footer-bottom__links">
+      <a href="faq.html#faq-pagos">Políticas de pago</a>
+      <a href="faq.html#faq-garantias">Garantías</a>
+      <a href="faq.html">Preguntas frecuentes</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Carrito de compras">
+  <div class="cart-drawer__head">
+    <div class="cart-drawer__title">
+      <svg class="icon" aria-hidden="true"><use href="#icon-cart"></use></svg> Carrito <span id="cartTitleCount">0</span>
+    </div>
+    <button class="cart-close" type="button" data-action="cart-close" aria-label="Cerrar carrito">
+      <svg class="icon" aria-hidden="true"><use href="#icon-close"></use></svg>
+    </button>
+  </div>
+  <div class="cart-drawer__body" id="cartItems"></div>
+  <div class="cart-drawer__foot" id="cartFoot"></div>
+</aside>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+  <script src="assets/js/catalogo.js" defer></script>
+</body>
+</html>
